@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "KJP Auto-Filler (releases)",
+    "version": "2.0",
+    "description": "Automatis Mengisi Form Pendaftaran Agar Tidak Terlambat",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://antrianpanganbersubsidi.pasarjaya.co.id/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://antrianpanganbersubsidi.pasarjaya.co.id/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ]
+}
